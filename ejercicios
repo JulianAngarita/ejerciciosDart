@@ -95,10 +95,12 @@ void main(){
 //   return currentTime.compareTo( otherDate );
 // }
 
+  String fecha1 = '2020-11-20';
+  String fecha2 = '2022-09-01';
     
-  print( '2020-11-20 es: ' + compareToDateNowasString('2020-11-20')  );
+  print( '$fecha2 es: ' + compareToDateNowasString(fecha2)  );
   
-  print( '2022-09-01 es: '+ compareToDateNowasString('2022-09-01') );
+  print( '$fecha1 es: '+ compareToDateNowasString(fecha1) );
  }
   
   
