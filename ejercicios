@@ -1,0 +1,109 @@
+
+
+
+void main(){
+  
+  
+  void loops() {
+     int count = 1;
+     bool loppWhile = true;
+        while( loppWhile ) {
+      print( "dentro del while $count" );
+      count++;
+      if( count == 4 ){
+        loppWhile = false;
+      }
+    }
+    
+    while( count <= 10 ) {
+      print( "dentro del while con sin flag $count" );
+      count++;
+      if( count == 4 ){
+        break;
+      }
+    }
+    
+    print( "afuera del while ");
+
+    int n = 10; 
+    do{
+      print(n);
+      n--;
+    } while( n > 0 );
+    
+    print( "salio" );
+    
+  }
+ 
+  void numerosFactoriales(int num){
+      int factorial = 1;
+      while( num >= 1 ) {
+        factorial = factorial * num;
+        num--; 
+      }
+    print(factorial);
+  }
+  
+  void manejadorOpciones(String opcion) {
+        switch( opcion ){
+        case "A": {
+            print( "Excellent");
+          }
+          break;
+        case "B": {
+          print( "good" );
+        }
+          break;
+        
+        case "C": {
+          print("Fair");
+        }
+          break;
+          
+        case "D": {
+          print( "Poor");
+        }
+          break;
+          
+        default: {
+          print( "invalid choice");
+        }
+          break;
+      }
+  }
+  
+  
+  
+  void manejadorDeFecha(){
+    
+  String compareToDateNowasString( String date ){
+    DateTime currentTime =  DateTime.now();
+    DateTime otherDate = DateTime.parse( date );
+    int result = currentTime.compareTo( otherDate );
+    return ( ( result <= 0 ) ? 'ahora o en el futuro': 'del pasado'); 
+  }
+    
+    
+// String compareToDateNowasStringTwo( String date ){
+//   int result =   DateTime.now().compareTo( DateTime.parse( date) );
+//   return ( ( result >= 0 ) ? 'ahora o en el futuro': ' del pasado' ); 
+// }
+    
+// int compareToDateNow( String date ){
+//   DateTime currentTime =  DateTime.now();
+//   DateTime otherDate = DateTime.parse( date );
+//   return currentTime.compareTo( otherDate );
+// }
+
+    
+  print( '2020-11-20 es: ' + compareToDateNowasString('2020-11-20')  );
+  
+  print( '2022-09-01 es: '+ compareToDateNowasString('2022-09-01') );
+ }
+  
+  
+  loops();
+  numerosFactoriales(5);
+  manejadorOpciones('');
+  manejadorDeFecha();    
+}
