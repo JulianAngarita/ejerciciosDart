@@ -1,18 +1,52 @@
+//Clase abstracta
+abstract class Animal {}
+
+abstract class Mammal extends Animal {}
+
+abstract class Bird extends Animal {}
+
+abstract class Fish extends Animal {}
+
+class Cat extends Mammal with WalkMixin {}
+
+class Dolphin extends Mammal with SwinMixin {}
+
+class Bat extends Mammal with WalkMixin, FlyMixin {}
+
+mixin SwinMixin {
+  void swin(String text) => print("swin $text");
+}
+
+mixin WalkMixin {
+  void walk(String text) => print("walk $text");
+  void velocity(String text) => print('velocity $text');
+}
+
+mixin FlyMixin {
+  void fly(String text) => print("fly $text");
+}
+
 void main() {
+  Bat newBat = new Bat();
+  newBat.fly('Muercilaguico');
+
+  Cat newCat = new Cat();
+  newCat.walk('Miguel');
+  newCat.velocity('Slow');
 
   void iterarLista() {
     var listaFrutas = ['manzana', 'pera', 'banano', 'tomate'];
-    for (int i = 0; i < listaFruta.length; i++) {
-      print('La fruta desde un for es ${listaFruta[i]}');
+    for (int i = 0; i < listaFrutas.length; i++) {
+      print('La fruta desde un for es ${listaFrutas[i]}');
     }
-    listaFruta.forEach((String fruta)) {
-      print('La fruta es $fruta');
-    }
+    // listaFrutas.forEach((String fruta)) {
+    //   print('La fruta es $fruta');
+    // };
   }
 
   void ternarias(bool valor) {
-    bool esVerdad = (valor) ? true : false
-    print(esVerdad)
+    bool esVerdad = (valor) ? true : false;
+    print(esVerdad);
   }
 
   void loops() {
@@ -114,10 +148,10 @@ void main() {
     print('$fecha1 es: ' + compareToDateNowasString(fecha1));
   }
 
-  loops();
-  ternarias(false)
-  iterarLista();
-  numerosFactoriales(5);
-  manejadorOpciones('');
+  // loops();
+  // ternarias(false);
+  // iterarLista();
+  // numerosFactoriales(5);
+  // manejadorOpciones('');
   manejadorDeFecha();
 }
