@@ -1,7 +1,11 @@
 //Clase abstracta
 abstract class Animal {}
 
-abstract class Mammal extends Animal {}
+abstract class Mammal extends Animal {
+  void walk(String text) {
+    print("Desde la clase abstracta (No debería imprimir)");
+  }
+}
 
 abstract class Bird extends Animal {}
 
@@ -33,6 +37,18 @@ void main() {
   Cat newCat = new Cat();
   newCat.walk('Miguel');
   newCat.velocity('Slow');
+
+  Dolphin newDolphin = new Dolphin();
+  newDolphin.walk('');
+
+  List<int> numbers = [85, 31];
+  numbers.add(1);
+  numbers.add(90);
+
+  Future<String> pickContact() async {
+    await Future.delayed(Duration(seconds: 2));
+    return "phone";
+  }
 
   void iterarLista() {
     var listaFrutas = ['manzana', 'pera', 'banano', 'tomate'];
