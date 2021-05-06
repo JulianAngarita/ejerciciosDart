@@ -1,111 +1,123 @@
+void main() {
 
+  void iterarLista() {
+    var listaFrutas = ['manzana', 'pera', 'banano', 'tomate'];
+    for (int i = 0; i < listaFruta.length; i++) {
+      print('La fruta desde un for es ${listaFruta[i]}');
+    }
+    listaFruta.forEach((String fruta)) {
+      print('La fruta es $fruta');
+    }
+  }
 
+  void ternarias(bool valor) {
+    bool esVerdad = (valor) ? true : false
+    print(esVerdad)
+  }
 
-void main(){
-  
-  
   void loops() {
-     int count = 1;
-     bool loppWhile = true;
-        while( loppWhile ) {
-      print( "dentro del while $count" );
+    int count = 1;
+    bool loppWhile = true;
+    while (loppWhile) {
+      print("dentro del while $count");
       count++;
-      if( count == 4 ){
+      if (count == 4) {
         loppWhile = false;
       }
     }
-    
-    while( count <= 10 ) {
-      print( "dentro del while con sin flag $count" );
+
+    while (count <= 10) {
+      print("dentro del while con sin flag $count");
       count++;
-      if( count == 4 ){
+      if (count == 4) {
         break;
       }
     }
-    
-    print( "afuera del while ");
 
-    int n = 10; 
-    do{
+    print("afuera del while ");
+
+    int n = 10;
+    do {
       print(n);
       n--;
-    } while( n > 0 );
-    
-    print( "salio" );
-    
+    } while (n > 0);
+
+    print("salio");
   }
- 
-  void numerosFactoriales(int num){
-      int factorial = 1;
-      while( num >= 1 ) {
-        factorial = factorial * num;
-        num--; 
-      }
+
+  void numerosFactoriales(int num) {
+    int factorial = 1;
+    while (num >= 1) {
+      factorial = factorial * num;
+      num--;
+    }
     print(factorial);
   }
-  
+
   void manejadorOpciones(String opcion) {
-        switch( opcion ){
-        case "A": {
-            print( "Excellent");
-          }
-          break;
-        case "B": {
-          print( "good" );
+    switch (opcion) {
+      case "A":
+        {
+          print("Excellent");
         }
-          break;
-        
-        case "C": {
+        break;
+      case "B":
+        {
+          print("good");
+        }
+        break;
+
+      case "C":
+        {
           print("Fair");
         }
-          break;
-          
-        case "D": {
-          print( "Poor");
+        break;
+
+      case "D":
+        {
+          print("Poor");
         }
-          break;
-          
-        default: {
-          print( "invalid choice");
+        break;
+
+      default:
+        {
+          print("invalid choice");
         }
-          break;
-      }
+        break;
+    }
   }
-  
-  
-  
-  void manejadorDeFecha(){
-    
-  String compareToDateNowasString( String date ){
-    DateTime currentTime =  DateTime.now();
-    DateTime otherDate = DateTime.parse( date );
-    int result = currentTime.compareTo( otherDate );
-    return ( ( result <= 0 ) ? 'ahora o en el futuro': 'del pasado'); 
-  }
-    
-    
+
+  void manejadorDeFecha() {
+    String compareToDateNowasString(String date) {
+      DateTime currentTime = DateTime.now();
+      DateTime otherDate = DateTime.parse(date);
+      int result = currentTime.compareTo(otherDate);
+      return ((result <= 0) ? 'ahora o en el futuro' : 'del pasado');
+    }
+
 // String compareToDateNowasStringTwo( String date ){
 //   int result =   DateTime.now().compareTo( DateTime.parse( date) );
-//   return ( ( result >= 0 ) ? 'ahora o en el futuro': ' del pasado' ); 
+//   return ( ( result >= 0 ) ? 'ahora o en el futuro': ' del pasado' );
 // }
-    
+
 // int compareToDateNow( String date ){
 //   DateTime currentTime =  DateTime.now();
 //   DateTime otherDate = DateTime.parse( date );
 //   return currentTime.compareTo( otherDate );
 // }
 
-  String fecha1 = '2020-11-20';
-  String fecha2 = '2022-09-01';
-    
-  print( '$fecha2 es: ' + compareToDateNowasString(fecha2)  );
-  
-  print( '$fecha1 es: '+ compareToDateNowasString(fecha1) );
- }
-  
-  
+    String fecha1 = '2020-11-20';
+    String fecha2 = '2022-09-01';
+
+    print('$fecha2 es: ' + compareToDateNowasString(fecha2));
+
+    print('$fecha1 es: ' + compareToDateNowasString(fecha1));
+  }
+
   loops();
+  ternarias(false)
+  iterarLista();
   numerosFactoriales(5);
   manejadorOpciones('');
-  manejadorDeFecha();    
+  manejadorDeFecha();
 }
